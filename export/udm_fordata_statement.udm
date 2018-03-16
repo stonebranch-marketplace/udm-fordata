@@ -1,0 +1,15 @@
+set i=1
+loaddata mydata=mydata.txt
+fordata line=mydata
+    echo "$(i): $(line)"
+
+    compare "$(line)" "exit" case=yes
+
+    if <"$(_lastrc.message)" EQ "MATCH">
+        echo
+        echo "Data contains an 'exit' command"
+        echo
+    end
+
+    set i=<$(i) + 1>
+end
