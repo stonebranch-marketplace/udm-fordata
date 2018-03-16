@@ -1,2 +1,2 @@
 # udm-fordata
-# UDM for  fordata Statement
+# UDM Script for fordata Statement
